@@ -1,0 +1,65 @@
+<style>
+    html,
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    button, select {
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 20px;
+        background-color: transparent;
+        border-radius: 20px;
+    }
+
+    .inline {
+        display: flex;
+        margin: 0 10px
+    }
+
+    canvas {
+        border: 1px solid black;
+        margin: 20px;
+    }
+
+</style>
+<h1>Frequency visualizer</h1>
+<select id="select-song">
+    <option value="music/mid.ogg">Instrumental</option>
+    <option value="music/finalsong.mp3">Final song by MO</option>
+    <option value="music/dieantwood.mp3">Alien by Die Antwood </option>
+    <option value="music/BeyonceHalo.mp3">Halo by Beyonce </option>
+    <option value="music/SiaCheapThrills.mp3">Cheap Thrills by Sia </option>
+</select>
+<div class="inline">
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <canvas id="canvas2" width="300" height="300"></canvas>
+</div>
+<div>
+    <button id="button-play">Play!</button>
+    <button id="button-stop">Stop!</button>
+</div>
+
+<script src="barsVisualization.js"></script>
+<script src="sunVisualization.js"></script>
+<script src="audio.js"></script>
+<script>
+    // face
+    // ctx2.beginPath();
+
+    // ctx2.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+    // ctx2.fillStyle = `hsl(${(9 + f * 20) % 360}, 85%, 55%)`;
+    // ctx2.fill();
+
+    // ctx2.moveTo(110, 75);
+    // ctx2.arc(75, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+    // ctx2.moveTo(65, 65);
+    // ctx2.arc(60, 65, 5, 0, Math.PI * 2, true);  // Left eye
+    // ctx2.moveTo(95, 65);
+    // ctx2.arc(90, 65, 5, 0, Math.PI * 2, true);  // Right eye
+    // ctx2.stroke();
+
+</script>
