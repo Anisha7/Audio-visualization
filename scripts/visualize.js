@@ -31,6 +31,8 @@ function render() {
   });
 
   ctx.stroke();
+  ctx2.stroke();
+  ctx3.stroke();
 
   requestAnimationFrame(render);
 }
