@@ -33,7 +33,7 @@ function render() {
     );
     drawBars(ctx2, f, i, frequencyArray[i], 300 / 200);
     drawFace(ctx3, f, 150/2, 150/2)
-    drawCircles(ctx4, i, f)
+    drawCircles(ctx4, i, f, frequencyArray.length)
   });
 
   ctx.stroke();

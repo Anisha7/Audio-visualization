@@ -54,15 +54,15 @@ function drawFace(c, f, centerX, centerY) {
   }
 
 
-  function drawCircles(c, i, f) {
-      const fx = 1024
+  function drawCircles(c, i, f, fx) {
       const diff = 300/32 // space between and radius
-      const offset = diff // TODO: change to radius
+      const radius = diff/2 - diff/12
+      const offset = radius
       const x = i % 32 * diff + offset
       const y = Math.floor(i/32) * diff + offset
 
       c.beginPath()
-      c.arc(x, y, diff, 0, Math.PI * 2, true)
+      c.arc(x, y, radius, 0, Math.PI * 2, true)
       c.fillStyle = `hsl(${(9 + f * 20) % 360}, 85%, 55%)`;
       c.fill();
       c.stroke();
