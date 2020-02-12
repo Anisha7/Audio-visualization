@@ -19,7 +19,9 @@ function render() {
   ctx4.clearRect(0, 0, 300, 300);
 
   analyser.getByteFrequencyData(frequencyArray);
-
+  const avgF = Math.max(...frequencyArray)
+  console.log(avgF)
+  drawFace(ctx3, avgF, 150, 150)
   frequencyArray.forEach((f, i) => {
     drawSun(
       ctx,
@@ -32,7 +34,6 @@ function render() {
       300 / 5
     );
     drawBars(ctx2, f, i, frequencyArray[i], 300 / 200);
-    drawFace(ctx3, f, 150/2, 150/2)
     drawCircles(ctx4, i, f, frequencyArray.length)
   });
 
