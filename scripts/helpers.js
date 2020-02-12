@@ -34,12 +34,8 @@ function drawFace(c, f, centerX, centerY) {
   // face
   c.beginPath();
 
-  // angle = Math.random(2)
-
   c.arc(centerX, centerY, 100, 0, Math.PI * 2, true); // Outer circle
   c.fillStyle = `hsl(${(f / 255) * 360}, 85%, 55%)`;
-  console.log(`hsl(${(f / 255) * 360}, 85%, 55%)`);
-  // c.fillStyle = 'blue'
   c.fill();
 
   if (happy) {
@@ -52,7 +48,7 @@ function drawFace(c, f, centerX, centerY) {
   }
   else { // sad
     c.moveTo(centerX + 35, centerY + 35);
-    c.arc(centerX, centerY + 35, 35, 0, Math.PI, true); // Mouth (clockwise)
+    c.arc(centerX, centerY + 35, 35, 0, Math.PI, true); // Mouth (counterclockwise)
   }
   c.moveTo(centerX - 25, centerY - 20);
   c.arc(centerX - 30, centerY - 20, 5, 0, Math.PI * 2, true); // Left eye
