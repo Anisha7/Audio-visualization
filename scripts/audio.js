@@ -39,6 +39,8 @@ function updateSongIndex() {
 
 // load audio
 function startAudio() {
+  playing = true
+
   audio = new Audio();
   audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
@@ -55,7 +57,10 @@ function startAudio() {
 }
 
 function stopAudio() {
-  if (audioContext) {
+
+  if (playing) {
     audioContext.close();
   }
+
+  playing = false
 }

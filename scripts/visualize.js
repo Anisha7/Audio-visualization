@@ -42,5 +42,7 @@ function render() {
   ctx3.stroke();
   ctx4.stroke()
 
-  requestAnimationFrame(render);
+  if (playing) {
+    requestAnimationFrame(render);
+  }
 }
