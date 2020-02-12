@@ -52,8 +52,6 @@ function startAudio() {
   frequencyArray = new Uint8Array(analyser.frequencyBinCount);
   audio.play();
   render();
-  render2();
-  render3();
 }
 
 function stopAudio() {

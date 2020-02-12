@@ -29,6 +29,12 @@ function drawBars(c, f, i, item, step) {
 
 // context.arc(x,y,r,sAngle,eAngle,counterclockwise);
 function drawFace(c, f, centerX, centerY) {
+
+    // TODO: What are the three angle pair values for sad face, happy face, and straight line?
+    // Use those three values to alternate from based on a frequency threshold
+
+    // TODO: ^ same for color, pick 3
+
     // face
     c.beginPath();
   
@@ -45,4 +51,19 @@ function drawFace(c, f, centerX, centerY) {
     c.moveTo(centerX + 95, centerY + 65);
     c.arc(centerX + 90, centerY + 65, 5, 0, Math.PI * 2, true); // Right eye
     c.stroke();
+  }
+
+
+  function drawCircles(c, i, f) {
+      const fx = 1024
+      const diff = 300/32 // space between and radius
+      const offset = diff // TODO: change to radius
+      const x = i % 32 * diff + offset
+      const y = Math.floor(i/32) * diff + offset
+
+      c.beginPath()
+      c.arc(x, y, diff, 0, Math.PI * 2, true)
+      c.fillStyle = `hsl(${(9 + f * 20) % 360}, 85%, 55%)`;
+      c.fill();
+      c.stroke();
   }
