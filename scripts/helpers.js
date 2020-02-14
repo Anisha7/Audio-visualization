@@ -66,10 +66,11 @@ function drawCircles(c, i, f, fx) {
   const offset = radius;
   const x = (i % 32) * diff + offset;
   const y = Math.floor(i / 32) * diff + offset;
-
+  const color = `hsl(${(9 + f * 20) % 360}, 85%, 55%)`;
   c.beginPath();
   c.arc(x, y, radius, 0, Math.PI * 2, true);
-  c.fillStyle = `hsl(${(9 + f * 20) % 360}, 85%, 55%)`;
+  c.strokeStyle = color;
+  c.fillStyle = color;
   c.fill();
   c.stroke();
 }
